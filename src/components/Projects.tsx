@@ -5,6 +5,9 @@ import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { ExternalLink, Github, Sparkles, ArrowUpRight, Users, Activity, Shield, Brain, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 
+// Base path for GitHub Pages deployment
+const basePath = process.env.NODE_ENV === 'production' ? '/moeinrazavi' : ''
+
 const projects = [
   {
     id: 'cerevu',
@@ -184,7 +187,7 @@ export default function Projects() {
                     {project.bgImage ? (
                       <div className="absolute inset-0">
                         <Image
-                          src={project.bgImage}
+                          src={`${basePath}${project.bgImage}`}
                           alt=""
                           fill
                           className="object-cover opacity-30 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
@@ -219,7 +222,7 @@ export default function Projects() {
                             className="relative w-14 h-14 rounded-xl overflow-hidden shadow-xl shadow-black/50 ring-1 ring-white/10"
                           >
                             <Image
-                              src={project.image}
+                              src={`${basePath}${project.image}`}
                               alt={project.title}
                               fill
                               className="object-cover"
