@@ -197,7 +197,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.3 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-0 right-0 flex justify-center"
       >
         <motion.a
           href="#about"
@@ -205,7 +205,7 @@ export default function Hero() {
           transition={{ duration: 2, repeat: Infinity }}
           className="flex flex-col items-center gap-2 text-gray-500 hover:text-white transition-colors"
         >
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
+          <span className="text-xs uppercase tracking-widest text-center">Scroll</span>
           <ArrowDown size={20} />
         </motion.a>
       </motion.div>
